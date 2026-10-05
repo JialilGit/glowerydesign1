@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowery Skin Aesthetics | Luxury Editorial & Spa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Cormorant Garamond & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxuryGold: '#C5A059',
+                        darkGold: '#997530',
+                        lightGold: '#E6C588',
+                        creamBg: '#FAF8F5',
+                        pureWhite: '#FFFFFF',
+                        espresso: '#2C221E',
+                        charcoal: '#3E2723',
+                        softGray: '#F4F1EA',
+                        borderGold: '#D4AF37'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        garamond: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF8F5;
+            color: #2C221E;
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1, h2, h3, h4, .font-serif-luxury {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .font-garamond {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A059;
+        }
+        /* Sharp luxury borders & gradients */
+        .gold-border {
+            border: 1px solid #C5A059;
+        }
+        .gold-border-thick {
+            border: 2px solid #C5A059;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #DFB967 0%, #B89042 50%, #8F6A28 100%);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #C5A059 0%, #997530 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 30px -5px rgba(44, 34, 30, 0.08);
+        }
+        /* No glassmorphism or neumorphism allowed - strict solid clean editorial cards */
+        .luxury-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E6D5B8;
+            transition: all 0.3s ease;
+        }
+        .luxury-card:hover {
+            border-color: #C5A059;
+            box-shadow: 0 15px 35px rgba(197, 160, 89, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-creamBg text-espresso antialiased min-h-screen flex flex-col selection:bg-[#C5A059] selection:text-white">
+
+    <div id="toastContainer" class="fixed top-24 right-6 z-50 flex flex-col gap-3 pointer-events-none"></div>
+
+    <header class="sticky top-0 z-40 bg-pureWhite border-b border-[#E6D5B8] editorial-shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+            
+            <!-- Logo Section matching the provided circular gold badge -->
+            <div class="flex items-center gap-4 cursor-pointer" onclick="switchTab('home')">
+                <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full gold-border-thick flex items-center justify-center bg-white p-1 overflow-hidden shadow-sm">
+                    <!-- SVG representation of the gold circular logo seal -->
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <circle cx="100" cy="100" r="92" fill="none" stroke="#C5A059" stroke-width="4"/>
+                        <circle cx="100" cy="100" r="82" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="3,3"/>
+                        <path id="curve" fill="transparent" d="M 30,100 A 70,70 0 1,1 170,100" />
+                        <text font-size="10.5" font-weight="bold" fill="#997530" letter-spacing="1.5" font-family="Montserrat">
+                            <textPath href="#curve" startOffset="50%" text-anchor="middle">FACE • BODY • NAILS • LASHES • PT • WHITENING • WAXING</textPath>
+                        </text>
+                        <!-- Center emblem -->
+                        <text x="100" y="92" font-size="16" font-weight="700" fill="#2C221E" text-anchor="middle" font-family="Playfair Display">GLOWERY</text>
+                        <text x="100" y="108" font-size="7" font-weight="600" fill="#997530" letter-spacing="2" text-anchor="middle" font-family="Montserrat">SKIN AESTHETICS</text>
+                        <text x="100" y="130" font-size="8" font-weight="500" fill="#7A5C28" letter-spacing="1" text-anchor="middle" font-family="Montserrat">EST. 2021</text>
+                    </svg>
+                </div>
+                <div>
+                    <span class="block font-serif text-xl sm:text-2xl font-bold tracking-wider text-espresso">GLOWERY</span>
+                    <span class="block text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#997530] font-semibold">Skin Aesthetics</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium tracking-wide">
+                <button onclick="switchTab('home')" id="nav-home" class="nav-link text-espresso hover:text-[#997530] pb-1 border-b-2 border-[#C5A059] transition-all">Home</button>
+                <button onclick="switchTab('clinic')" id="nav-clinic" class="nav-link text-espresso hover:text-[#997530] pb-1 border-b-2 border-transparent transition-all">The Clinic</button>
+                <button onclick="switchTab('treatments')" id="nav-treatments" class="nav-link text-espresso hover:text-[#997530] pb-1 border-b-2 border-transparent transition-all">Treatments</button>
+                <button onclick="switchTab('promo')" id="nav-promo" class="nav-link text-espresso hover:text-[#997530] pb-1 border-b-2 border-transparent transition-all">Promo</button>
+                <button onclick="switchTab('specials')" id="nav-specials" class="nav-link text-espresso hover:text-[#997530] pb-1 border-b-2 border-transparent transition-all">Specials</button>
+                <button onclick="switchTab('contact')" id="nav-contact" class="nav-link text-espresso hover:text-[#997530] pb-1 border-b-2 border-transparent transition-all">Contact</button>
+                <button onclick="switchTab('members')" id="nav-members" class="nav-link text-espresso hover:text-[#997530] pb-1 border-b-2 border-transparent transition-all">Members</button>
+                <button onclick="switchTab('program')" id="nav-program" class="nav-link text-espresso hover:text-[#997530] pb-1 border-b-2 border-transparent transition-all">Program List</button>
+                <button onclick="switchTab('events')" id="nav-events" class="nav-link text-espresso hover:text-[#997530] pb-1 border-b-2 border-transparent transition-all">Events</button>
+            </nav>
+
+            <!-- Header Dynamic Icons (Music icon for Home tab, Cart icon for Shop section) -->
+            <div class="flex items-center space-x-4">
+                <!-- Music Control Button (Visible on Home tab) -->
+                <div id="musicControlContainer" class="flex items-center">
+                    <button onclick="toggleSpaAudio()" id="musicToggleBtn" title="Toggle Soothing Spa Audio" class="w-10 h-10 rounded-full border border-[#C5A059] flex items-center justify-center text-[#997530] hover:bg-[#FAF8F5] transition-all relative">
+                        <i id="musicIcon" class="fa-solid fa-music"></i>
+                        <span id="musicSlash" class="absolute w-5 h-0.5 bg-[#C5A059] transform rotate-45 hidden"></span>
+                    </button>
+                </div>
+
+                <!-- Cart Icon Button -->
+                <button onclick="openCartModal()" class="relative w-10 h-10 rounded-full border border-[#C5A059] flex items-center justify-center text-[#997530] hover:bg-[#FAF8F5] transition-all">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cartBadge" class="absolute -top-1 -right-1 bg-[#997530] text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="xl:hidden text-espresso p-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileMenu" class="hidden xl:hidden bg-pureWhite border-t border-[#E6D5B8] px-6 py-4 space-y-3">
+            <button onclick="switchTab('home'); toggleMobileMenu();" class="block w-full text-left py-2 font-medium text-espresso">Home</button>
+            <button onclick="switchTab('clinic'); toggleMobileMenu();" class="block w-full text-left py-2 font-medium text-espresso">The Clinic</button>
+            <button onclick="switchTab('treatments'); toggleMobileMenu();" class="block w-full text-left py-2 font-medium text-espresso">Treatments</button>
+            <button onclick="switchTab('promo'); toggleMobileMenu();" class="block w-full text-left py-2 font-medium text-espresso">Promo</button>
+            <button onclick="switchTab('specials'); toggleMobileMenu();" class="block w-full text-left py-2 font-medium text-espresso">Specials</button>
+            <button onclick="switchTab('contact'); toggleMobileMenu();" class="block w-full text-left py-2 font-medium text-espresso">Contact</button>
+            <button onclick="switchTab('members'); toggleMobileMenu();" class="block w-full text-left py-2 font-medium text-espresso">Members Portal</button>
+            <button onclick="switchTab('program'); toggleMobileMenu();" class="block w-full text-left py-2 font-medium text-espresso">Program List</button>
+            <button onclick="switchTab('events'); toggleMobileMenu();" class="block w-full text-left py-2 font-medium text-espresso">Events</button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- ================= TAB 1: HOME ================= -->
+        <div id="tab-home" class="tab-content">
+            <!-- Hero Section -->
+            <section class="relative min-h-[85vh] flex items-center justify-center bg-[#FAF8F5] px-4 py-20 border-b border-[#E6D5B8]">
+                <div class="max-w-5xl mx-auto text-center space-y-8 z-10">
+                    <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[#C5A059] bg-white text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold">
+                        <span>EST. 2021</span>
+                        <span>•</span>
+                        <span>Pure Editorial Luxury</span>
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-espresso leading-[1.15]">
+                        Where Science Meets <br><span class="font-garamond italic font-normal gold-gradient-text text-5xl sm:text-7xl md:text-8xl">Timeless Elegance</span>
+                    </h1>
+                    <p class="max-w-2xl mx-auto text-base sm:text-lg text-espresso/80 font-light leading-relaxed">
+                        Experience bespoke skin aesthetics, precision laser care, and rejuvenating spa rituals crafted exclusively for elite clientele.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                        <button onclick="switchTab('treatments')" class="w-full sm:w-auto px-8 py-4 gold-gradient-bg text-white font-medium uppercase tracking-wider text-sm rounded-none border border-[#997530] hover:opacity-95 transition-all shadow-md">
+                            Explore Treatments
+                        </button>
+                        <button onclick="switchTab('promo')" class="w-full sm:w-auto px-8 py-4 bg-white text-espresso font-medium uppercase tracking-wider text-sm rounded-none border border-[#C5A059] hover:bg-[#FAF8F5] transition-all">
+                            View Popular Promo
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Philosophy Highlights -->
+            <section class="py-24 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="text-center p-8 luxury-card">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full border border-[#C5A059] flex items-center justify-center text-[#997530] text-2xl">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-espresso mb-3">Uncompromising Purity</h3>
+                        <p class="text-sm text-espresso/70 leading-relaxed font-light">Utilizing world-class FDA-approved dermatological technologies and organic botanical formulas.</p>
+                    </div>
+                    <div class="text-center p-8 luxury-card">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full border border-[#C5A059] flex items-center justify-center text-[#997530] text-2xl">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-espresso mb-3">Holistic Rejuvenation</h3>
+                        <p class="text-sm text-espresso/70 leading-relaxed font-light">A sanctuary designed to soothe your senses while transforming your skin texture and tone.</p>
+                    </div>
+                    <div class="text-center p-8 luxury-card">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-full border border-[#C5A059] flex items-center justify-center text-[#997530] text-2xl">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-espresso mb-3">Expert Practitioners</h3>
+                        <p class="text-sm text-espresso/70 leading-relaxed font-light">Led by board-certified dermatologists and master aestheticians with decades of clinical excellence.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Shop Preview Section -->
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center max-w-2xl mx-auto mb-16">
+                        <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block mb-2">Curated Skincare</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso">The Glowery Edit Shop</h2>
+                        <div class="w-16 h-0.5 bg-[#C5A059] mx-auto mt-4"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Product 1 -->
+                        <div class="luxury-card p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="h-64 bg-[#F4F1EA] mb-6 flex items-center justify-center relative overflow-hidden border border-[#E6D5B8]">
+                                    <img src="https://placehold.co/400x500/FAF8F5/997530?text=Gold+Infusion+Serum" alt="Serum" class="w-full h-full object-cover">
+                                    <span class="absolute top-3 left-3 bg-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 border border-[#C5A059] text-[#997530]">Bestseller</span>
+                                </div>
+                                <h4 class="font-serif text-lg font-bold text-espresso mb-1">24K Gold Cellular Renewal Serum</h4>
+                                <p class="text-xs text-espresso/70 mb-4">Intense hydration & collagen synthesis formula (50ml).</p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-[#E6D5B8]">
+                                <span class="font-serif text-lg font-bold text-[#997530]">$185.00</span>
+                                <button onclick="addToCart('24K Gold Cellular Renewal Serum', 185)" class="px-4 py-2 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Add to Cart</button>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="luxury-card p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="h-64 bg-[#F4F1EA] mb-6 flex items-center justify-center relative overflow-hidden border border-[#E6D5B8]">
+                                    <img src="https://placehold.co/400x500/FAF8F5/997530?text=Radiance+Elixir" alt="Elixir" class="w-full h-full object-cover">
+                                    <span class="absolute top-3 left-3 bg-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 border border-[#C5A059] text-[#997530]">New</span>
+                                </div>
+                                <h4 class="font-serif text-lg font-bold text-espresso mb-1">Botanical Radiance Cleansing Cream</h4>
+                                <p class="text-xs text-espresso/70 mb-4">Gentle lipid barrier restorative cleanser (150ml).</p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-[#E6D5B8]">
+                                <span class="font-serif text-lg font-bold text-[#997530]">$95.00</span>
+                                <button onclick="addToCart('Botanical Radiance Cleansing Cream', 95)" class="px-4 py-2 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Add to Cart</button>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="luxury-card p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="h-64 bg-[#F4F1EA] mb-6 flex items-center justify-center relative overflow-hidden border border-[#E6D5B8]">
+                                    <img src="https://placehold.co/400x500/FAF8F5/997530?text=Peptide+Mask" alt="Mask" class="w-full h-full object-cover">
+                                    <span class="absolute top-3 left-3 bg-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 border border-[#C5A059] text-[#997530]">Exclusive</span>
+                                </div>
+                                <h4 class="font-serif text-lg font-bold text-espresso mb-1">Cellular Peptide Night Treatment</h4>
+                                <p class="text-xs text-espresso/70 mb-4">Overnight firming & smoothing peptide mask (75ml).</p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-[#E6D5B8]">
+                                <span class="font-serif text-lg font-bold text-[#997530]">$140.00</span>
+                                <button onclick="addToCart('Cellular Peptide Night Treatment', 140)" class="px-4 py-2 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section class="py-24 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center max-w-2xl mx-auto mb-16">
+                        <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block mb-2">Editorial Journal</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso">Skin Science & Luxury Living</h2>
+                        <div class="w-16 h-0.5 bg-[#C5A059] mx-auto mt-4"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="luxury-card p-8 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold mb-2 block">October 2026 • Skincare Science</span>
+                                <h3 class="font-serif text-2xl font-bold text-espresso mb-4">The Art of Cellular Regeneration Through Gold Infusions</h3>
+                                <p class="text-sm text-espresso/70 font-light leading-relaxed mb-6">Discover how micronized 24K gold particles stimulate cellular ion exchange, reduce oxidative stress, and impart an everlasting, luminous vitality to mature skin.</p>
+                            </div>
+                            <button onclick="openBlogModal('The Art of Cellular Regeneration Through Gold Infusions')" class="text-xs uppercase tracking-widest font-bold text-[#997530] hover:text-espresso flex items-center gap-2 self-start">
+                                Read Full Article <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="luxury-card p-8 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold mb-2 block">September 2026 • Seasonal Care</span>
+                                <h3 class="font-serif text-2xl font-bold text-espresso mb-4">Transitioning Your Lipid Barrier for Autumn & Winter</h3>
+                                <p class="text-sm text-espresso/70 font-light leading-relaxed mb-6">Expert strategies to shield delicate facial tissues from environmental fluctuations while maintaining optimal moisture retention and deep dermal nourishment.</p>
+                            </div>
+                            <button onclick="openBlogModal('Transitioning Your Lipid Barrier for Autumn & Winter')" class="text-xs uppercase tracking-widest font-bold text-[#997530] hover:text-espresso flex items-center gap-2 self-start">
+                                Read Full Article <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Feedback & Google Review Banner -->
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto text-center">
+                    <div class="max-w-3xl mx-auto luxury-card p-12 bg-white border-[#C5A059]">
+                        <div class="flex items-center justify-center gap-1 text-[#C5A059] text-xl mb-6">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="font-serif text-2xl sm:text-3xl text-espresso italic mb-6 leading-relaxed">
+                            "Glowery Skin Aesthetics redefined my standard of personal care. The attention to detail, pristine clinic ambiance, and transformative facials are truly unmatched."
+                        </blockquote>
+                        <cite class="block font-semibold uppercase tracking-widest text-xs text-[#997530] not-italic">Victoria Sterling — Verified Google Review (5.0 ★★★★★)</cite>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= TAB 2: THE CLINIC ================= -->
+        <div id="tab-clinic" class="tab-content hidden">
+            <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-5xl mx-auto text-center space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block">About Glowery</span>
+                    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-espresso">The Clinic of Distinction</h1>
+                    <p class="text-espresso/80 font-light text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+                        Founded in 2021, Glowery Skin Aesthetics was born from a singular vision: to create an immaculate sanctuary where advanced dermatological science converges with uncompromising luxury hospitality.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Core Pillars -->
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="luxury-card p-8">
+                        <h3 class="font-serif text-xl font-bold text-espresso mb-3">Our Mission</h3>
+                        <p class="text-sm text-espresso/70 font-light leading-relaxed">To empower individuals through personalized, scientifically advanced aesthetic treatments that elevate natural confidence and preserve youthful vitality.</p>
+                    </div>
+                    <div class="luxury-card p-8">
+                        <h3 class="font-serif text-xl font-bold text-espresso mb-3">Commitment to Excellence</h3>
+                        <p class="text-sm text-espresso/70 font-light leading-relaxed">Every protocol is meticulously tailored, utilizing hospital-grade sterilization, cutting-edge equipment, and bespoke botanical formulations.</p>
+                    </div>
+                    <div class="luxury-card p-8">
+                        <h3 class="font-serif text-xl font-bold text-espresso mb-3">Expert Care</h3>
+                        <p class="text-sm text-espresso/70 font-light leading-relaxed">Our clinical team consists of internationally trained dermatologists, laser specialists, and master aestheticians dedicated to clinical precision.</p>
+                    </div>
+                    <div class="luxury-card p-8">
+                        <h3 class="font-serif text-xl font-bold text-espresso mb-3">Personalized Results</h3>
+                        <p class="text-sm text-espresso/70 font-light leading-relaxed">No two complexions are identical. We conduct comprehensive diagnostic skin mappings prior to recommending any transformative regimen.</p>
+                    </div>
+                    <div class="luxury-card p-8">
+                        <h3 class="font-serif text-xl font-bold text-espresso mb-3">Transform Your Skin</h3>
+                        <p class="text-sm text-espresso/70 font-light leading-relaxed">Witness undeniable improvements in dermal elasticity, cellular turnover, tone uniformity, and pristine radiance.</p>
+                    </div>
+                    <div class="luxury-card p-8">
+                        <h3 class="font-serif text-xl font-bold text-espresso mb-3">Enhance Your Confidence</h3>
+                        <p class="text-sm text-espresso/70 font-light leading-relaxed">Step into the world radiating timeless poise with skin that feels as immaculate as it looks.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= TAB 3: TREATMENTS ================= -->
+        <div id="tab-treatments" class="tab-content hidden">
+            <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-5xl mx-auto text-center space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block">Signature Services</span>
+                    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-espresso">Our Comprehensive Treatments</h1>
+                    <p class="text-espresso/80 font-light text-base max-w-2xl mx-auto leading-relaxed">
+                        Explore our curated menu of aesthetic enhancements performed under pristine clinical standards.
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Treatment 1 -->
+                    <div class="luxury-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-espresso mb-2">Facial Treatments</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-4">Deep hydration, cellular oxygenation, and bespoke 24K gold facial rituals.</p>
+                            <span class="font-serif text-sm font-bold text-[#997530] block mb-4">From $150</span>
+                        </div>
+                        <button onclick="openBookingModal('Facial Treatments')" class="w-full py-2.5 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Book Treatment</button>
+                    </div>
+                    <!-- Treatment 2 -->
+                    <div class="luxury-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-espresso mb-2">Body Treatments</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-4">Exfoliating botanical scrubs, contour wraps, and lymphatic drainage therapies.</p>
+                            <span class="font-serif text-sm font-bold text-[#997530] block mb-4">From $200</span>
+                        </div>
+                        <button onclick="openBookingModal('Body Treatments')" class="w-full py-2.5 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Book Treatment</button>
+                    </div>
+                    <!-- Treatment 3 -->
+                    <div class="luxury-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-espresso mb-2">Hair Removal</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-4">Advanced painless diode laser hair removal for silky smooth results.</p>
+                            <span class="font-serif text-sm font-bold text-[#997530] block mb-4">From $120</span>
+                        </div>
+                        <button onclick="openBookingModal('Hair Removal')" class="w-full py-2.5 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Book Treatment</button>
+                    </div>
+                    <!-- Treatment 4 -->
+                    <div class="luxury-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-espresso mb-2">Skin Tightening</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-4">RF and HIFU non-surgical lifting for facial and neck rejuvenation.</p>
+                            <span class="font-serif text-sm font-bold text-[#997530] block mb-4">From $350</span>
+                        </div>
+                        <button onclick="openBookingModal('Skin Tightening')" class="w-full py-2.5 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Book Treatment</button>
+                    </div>
+                    <!-- Treatment 5 -->
+                    <div class="luxury-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-espresso mb-2">Brow and Lash Extensions</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-4">Meticulous microblading, keratin lash lifts, and silk extensions.</p>
+                            <span class="font-serif text-sm font-bold text-[#997530] block mb-4">From $90</span>
+                        </div>
+                        <button onclick="openBookingModal('Brow and Lash Extensions')" class="w-full py-2.5 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Book Treatment</button>
+                    </div>
+                    <!-- Treatment 6 -->
+                    <div class="luxury-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-espresso mb-2">Nail Services</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-4">Medical-grade manicures, organic overlays, and gel finishes.</p>
+                            <span class="font-serif text-sm font-bold text-[#997530] block mb-4">From $70</span>
+                        </div>
+                        <button onclick="openBookingModal('Nail Services')" class="w-full py-2.5 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Book Treatment</button>
+                    </div>
+                    <!-- Treatment 7 -->
+                    <div class="luxury-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-espresso mb-2">Spa Services</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-4">Aromatherapy massages and stress-relieving hydrotherapy sessions.</p>
+                            <span class="font-serif text-sm font-bold text-[#997530] block mb-4">From $180</span>
+                        </div>
+                        <button onclick="openBookingModal('Spa Services')" class="w-full py-2.5 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Book Treatment</button>
+                    </div>
+                    <!-- Treatment 8 -->
+                    <div class="luxury-card p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-espresso mb-2">Physical Therapy Services</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-4">Specialized posture restoration, therapeutic stretching, and rehabilitation.</p>
+                            <span class="font-serif text-sm font-bold text-[#997530] block mb-4">From $160</span>
+                        </div>
+                        <button onclick="openBookingModal('Physical Therapy Services')" class="w-full py-2.5 bg-espresso text-white text-xs uppercase tracking-wider hover:bg-[#997530] transition-all">Book Treatment</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= TAB 4: OUR POPULAR PROMO ================= -->
+        <div id="tab-promo" class="tab-content hidden">
+            <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-5xl mx-auto text-center space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block">Exclusive Offering</span>
+                    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-espresso">Our Popular Promo</h1>
+                    <p class="text-espresso/80 font-light text-base max-w-2xl mx-auto leading-relaxed">
+                        Indulge in our most sought-after seasonal combination package crafted for maximum luminosity.
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto luxury-card p-8 sm:p-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="h-80 bg-[#F4F1EA] border border-[#E6D5B8] overflow-hidden relative">
+                            <img src="https://placehold.co/600x600/FAF8F5/997530?text=Royal+Glow+Package" alt="Promo" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-espresso text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1">Save 35%</span>
+                        </div>
+                        <div class="space-y-6">
+                            <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold">Limited Availability</span>
+                            <h2 class="font-serif text-3xl font-bold text-espresso">The Royal Gold Illumination Ritual</h2>
+                            <p class="text-sm text-espresso/70 font-light leading-relaxed">
+                                Includes 24K Gold Cellular Facial, Oxygen Infusion Therapy, and Rejuvenating LED Light Session with complimentary botanical serum gift.
+                            </p>
+                            
+                            <!-- Options selector dropdown -->
+                            <div class="space-y-2">
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-espresso">Select Skin Focus Type</label>
+                                <select id="promoOption" class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none">
+                                    <option>Anti-Aging & Firming</option>
+                                    <option>Intense Hydration & Barrier Repair</option>
+                                    <option>Brightening & Pigmentation Correction</option>
+                                </select>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-4 border-t border-[#E6D5B8]">
+                                <div>
+                                    <span class="text-xs text-espresso/60 uppercase tracking-widest block">Duration: 120 mins</span>
+                                    <span class="font-serif text-2xl font-bold text-[#997530]">$280 <span class="text-xs line-through text-espresso/40">$430</span></span>
+                                </div>
+                                <button onclick="bookPromo()" class="px-6 py-3 gold-gradient-bg text-white text-xs uppercase tracking-widest font-medium hover:opacity-95 transition-all shadow-md">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= TAB 5: SPECIALS ================= -->
+        <div id="tab-specials" class="tab-content hidden">
+            <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-5xl mx-auto text-center space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block">Seasonal Luxury</span>
+                    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-espresso">Special VIP Packages</h1>
+                    <p class="text-espresso/80 font-light text-base max-w-2xl mx-auto leading-relaxed">
+                        Handcrafted seasonal packages designed for comprehensive wellness and radiant skin transformations.
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="luxury-card p-8 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold block mb-2">Autumn Escape</span>
+                            <h3 class="font-serif text-2xl font-bold text-espresso mb-3">The Velvet Touch Rejuvenation</h3>
+                            <p class="text-sm text-espresso/70 font-light leading-relaxed mb-6">A 3-session intensive course combining micro-needling, radiofrequency tightening, and bespoke soothing masks.</p>
+                            <ul class="space-y-2 text-xs text-espresso/80 mb-6 font-light">
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> 3x Advanced Micro-Needling Sessions</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Complimentary Home Care Post-Treatment Kit</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Priority Booking Privileges</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-[#E6D5B8]">
+                            <span class="font-serif text-xl font-bold text-[#997530]">$750 <span class="text-xs line-through text-espresso/40">$1,100</span></span>
+                            <button onclick="openBookingModal('The Velvet Touch Rejuvenation')" class="px-6 py-3 bg-espresso text-white text-xs uppercase tracking-widest hover:bg-[#997530] transition-all">Claim Special</button>
+                        </div>
+                    </div>
+                    <div class="luxury-card p-8 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold block mb-2">Bride & Groom Elegance</span>
+                            <h3 class="font-serif text-2xl font-bold text-espresso mb-3">The Eternal Radiance Bridal Suite</h3>
+                            <p class="text-sm text-espresso/70 font-light leading-relaxed mb-6">Complete 2-month pre-wedding preparation schedule tailored for flawless, glowing skin on your special day.</p>
+                            <ul class="space-y-2 text-xs text-espresso/80 mb-6 font-light">
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> 6x Customized Facial & Body Rituals</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Laser Hair Removal Trial Included</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Dedicated Personal Aesthetician</li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-[#E6D5B8]">
+                            <span class="font-serif text-xl font-bold text-[#997530]">$1,450 <span class="text-xs line-through text-espresso/40">$2,100</span></span>
+                            <button onclick="openBookingModal('The Eternal Radiance Bridal Suite')" class="px-6 py-3 bg-espresso text-white text-xs uppercase tracking-widest hover:bg-[#997530] transition-all">Claim Special</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= TAB 6: CONTACT ================= -->
+        <div id="tab-contact" class="tab-content hidden">
+            <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-5xl mx-auto text-center space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block">Get in Touch</span>
+                    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-espresso">Contact Our Sanctuaries</h1>
+                    <p class="text-espresso/80 font-light text-base max-w-2xl mx-auto leading-relaxed">
+                        We invite you to reach out for private consultations, bookings, or bespoke inquiries.
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Branches info -->
+                    <div class="space-y-8">
+                        <div class="luxury-card p-8">
+                            <h3 class="font-serif text-2xl font-bold text-espresso mb-4">Bonifacio Global City Branch</h3>
+                            <p class="text-sm text-espresso/80 font-light mb-2"><i class="fa-solid fa-location-dot text-[#C5A059] mr-3"></i> 5th Avenue, High Street South, BGC, Taguig City</p>
+                            <p class="text-sm text-espresso/80 font-light mb-2"><i class="fa-solid fa-phone text-[#C5A059] mr-3"></i> +63 (2) 8839-4920</p>
+                            <p class="text-sm text-espresso/80 font-light"><i class="fa-solid fa-clock text-[#C5A059] mr-3"></i> Mon - Sun: 10:00 AM - 8:00 PM</p>
+                        </div>
+                        <div class="luxury-card p-8">
+                            <h3 class="font-serif text-2xl font-bold text-espresso mb-4">Makati Flagship Branch</h3>
+                            <p class="text-sm text-espresso/80 font-light mb-2"><i class="fa-solid fa-location-dot text-[#C5A059] mr-3"></i> Ayala Triangle Gardens, Legaspi Village, Makati City</p>
+                            <p class="text-sm text-espresso/80 font-light mb-2"><i class="fa-solid fa-phone text-[#C5A059] mr-3"></i> +63 (2) 8812-7301</p>
+                            <p class="text-sm text-espresso/80 font-light"><i class="fa-solid fa-clock text-[#C5A059] mr-3"></i> Mon - Sun: 9:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form -->
+                    <div class="luxury-card p-8 sm:p-10">
+                        <h3 class="font-serif text-2xl font-bold text-espresso mb-6">Send an Inquiry</h3>
+                        <form onsubmit="handleContactSubmit(event)" class="space-y-6">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Full Name</label>
+                                <input type="text" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none" placeholder="Victoria Sterling">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Email Address</label>
+                                <input type="email" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none" placeholder="victoria@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Message or Inquiry</label>
+                                <textarea rows="4" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none" placeholder="Write your inquiry here..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 gold-gradient-bg text-white text-xs uppercase tracking-widest font-medium hover:opacity-95 transition-all shadow-md">
+                                Submit Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= TAB 7: MEMBERS ================= -->
+        <div id="tab-members" class="tab-content hidden">
+            <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-5xl mx-auto text-center space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block">Exclusive Portal</span>
+                    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-espresso">Elite Members Portal</h1>
+                    <p class="text-espresso/80 font-light text-base max-w-2xl mx-auto leading-relaxed">
+                        Access your membership benefits, VIP bookings, and skincare portfolio.
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left side: live counter -->
+                    <div class="luxury-card p-12 text-center bg-white space-y-6">
+                        <div class="w-20 h-20 mx-auto rounded-full border-2 border-[#C5A059] flex items-center justify-center text-[#997530] text-3xl">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block">Platform Community</span>
+                        <h2 id="memberCounter" class="font-serif text-5xl sm:text-6xl font-bold text-espresso">2,485</h2>
+                        <p class="text-sm font-semibold uppercase tracking-widest text-espresso/70">Active Elite Members Worldwide</p>
+                        <p class="text-xs text-espresso/60 font-light max-w-md mx-auto">Join our prestigious network of skincare connoisseurs and enjoy priority privileges across all branches.</p>
+                    </div>
+
+                    <!-- Right side: Sign In and Sign Up interactive tabs -->
+                    <div class="luxury-card p-8 sm:p-10 bg-white">
+                        <div class="flex border-b border-[#E6D5B8] mb-8">
+                            <button onclick="switchAuthTab('signin')" id="authTabSignin" class="flex-1 pb-4 text-xs uppercase tracking-widest font-bold text-[#997530] border-b-2 border-[#C5A059] transition-all">Sign In</button>
+                            <button onclick="switchAuthTab('signup')" id="authTabSignup" class="flex-1 pb-4 text-xs uppercase tracking-widest font-medium text-espresso/60 border-b-2 border-transparent transition-all">Sign Up</button>
+                        </div>
+
+                        <!-- Sign In Form -->
+                        <form id="formSignin" onsubmit="handleAuthSubmit(event, 'Sign In')" class="space-y-6">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Email Address</label>
+                                <input type="email" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none" placeholder="member@glowery.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Password</label>
+                                <input type="password" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none" placeholder="••••••••">
+                            </div>
+                            <button type="submit" class="w-full py-4 gold-gradient-bg text-white text-xs uppercase tracking-widest font-medium hover:opacity-95 transition-all shadow-md">
+                                Access Portal
+                            </button>
+                        </form>
+
+                        <!-- Sign Up Form -->
+                        <form id="formSignup" onsubmit="handleAuthSubmit(event, 'Sign Up')" class="space-y-6 hidden">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Full Name</label>
+                                <input type="text" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none" placeholder="Victoria Sterling">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Email Address</label>
+                                <input type="email" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none" placeholder="victoria@glowery.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Create Password</label>
+                                <input type="password" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none" placeholder="••••••••">
+                            </div>
+                            <button type="submit" class="w-full py-4 gold-gradient-bg text-white text-xs uppercase tracking-widest font-medium hover:opacity-95 transition-all shadow-md">
+                                Register Elite Membership
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= TAB 8: PROGRAM LIST ================= -->
+        <div id="tab-program" class="tab-content hidden">
+            <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-5xl mx-auto text-center space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block">VIP Tiers & Loyalty</span>
+                    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-espresso">Skincare Program List</h1>
+                    <p class="text-espresso/80 font-light text-base max-w-2xl mx-auto leading-relaxed">
+                        Structured membership programs designed to reward your commitment to lifelong radiant skin.
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Tier 1 -->
+                    <div class="luxury-card p-8 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold block mb-2">Tier I</span>
+                            <h3 class="font-serif text-2xl font-bold text-espresso mb-4">Gold Member</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-6">Ideal for foundational skincare maintenance and monthly rejuvenation.</p>
+                            <ul class="space-y-3 text-xs text-espresso/80 mb-8 font-light">
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> 10% Off All Facial Treatments</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Monthly Skin Diagnostic Session</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Birthday Month Special Gift</li>
+                            </ul>
+                        </div>
+                        <button onclick="openBookingModal('Gold Member Program')" class="w-full py-3 bg-espresso text-white text-xs uppercase tracking-widest hover:bg-[#997530] transition-all">Join Tier</button>
+                    </div>
+                    <!-- Tier 2 -->
+                    <div class="luxury-card p-8 flex flex-col justify-between border-2 border-[#C5A059] bg-white shadow-lg">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold block mb-2">Tier II • Most Popular</span>
+                            <h3 class="font-serif text-2xl font-bold text-espresso mb-4">Platinum Elite</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-6">Comprehensive anti-aging and advanced laser care privileges.</p>
+                            <ul class="space-y-3 text-xs text-espresso/80 mb-8 font-light">
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> 20% Off All Treatments & Products</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Bi-monthly 24K Gold Facial Included</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Priority VIP Lounge Access</li>
+                            </ul>
+                        </div>
+                        <button onclick="openBookingModal('Platinum Elite Program')" class="w-full py-3 gold-gradient-bg text-white text-xs uppercase tracking-widest font-medium hover:opacity-95 transition-all shadow-md">Join Tier</button>
+                    </div>
+                    <!-- Tier 3 -->
+                    <div class="luxury-card p-8 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold block mb-2">Tier III</span>
+                            <h3 class="font-serif text-2xl font-bold text-espresso mb-4">Diamond Sovereign</h3>
+                            <p class="text-xs text-espresso/70 font-light mb-6">Absolute ultimate concierge aesthetic care with private clinic hours.</p>
+                            <ul class="space-y-3 text-xs text-espresso/80 mb-8 font-light">
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> 30% Off All Services & Home Care</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Unlimited Monthly Consultations</li>
+                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Dedicated Private Aesthetician</li>
+                            </ul>
+                        </div>
+                        <button onclick="openBookingModal('Diamond Sovereign Program')" class="w-full py-3 bg-espresso text-white text-xs uppercase tracking-widest hover:bg-[#997530] transition-all">Join Tier</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= TAB 9: EVENTS ================= -->
+        <div id="tab-events" class="tab-content hidden">
+            <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-[#E6D5B8]">
+                <div class="max-w-5xl mx-auto text-center space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-[#997530] font-semibold block">Exclusive Gatherings</span>
+                    <h1 class="font-serif text-4xl sm:text-5xl font-bold text-espresso">Clinic Events & Masterclasses</h1>
+                    <p class="text-espresso/80 font-light text-base max-w-2xl mx-auto leading-relaxed">
+                        Join our upcoming skin consultation workshops, VIP product launches, and expert-led masterclasses.
+                    </p>
+                </div>
+            </section>
+
+            <section class="py-24 bg-[#FAF8F5] px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="luxury-card p-8 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold block mb-2">November 18, 2026 • BGC Flagship</span>
+                            <h3 class="font-serif text-2xl font-bold text-espresso mb-3">Cellular Longevity & Anti-Aging Masterclass</h3>
+                            <p class="text-sm text-espresso/70 font-light leading-relaxed mb-6">An intimate evening with our lead dermatologists discussing advanced cellular science, collagen preservation, and lifestyle nutrition.</p>
+                            <div class="text-xs text-espresso/60 mb-6 space-y-1">
+                                <p><i class="fa-solid fa-clock text-[#C5A059] mr-2"></i> 6:00 PM - 8:30 PM</p>
+                                <p><i class="fa-solid fa-user-group text-[#C5A059] mr-2"></i> Limited to 25 Attendees</p>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Masterclass: Cellular Longevity')" class="w-full py-3 bg-espresso text-white text-xs uppercase tracking-widest hover:bg-[#997530] transition-all">RSVP Attendance</button>
+                    </div>
+                    <div class="luxury-card p-8 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold block mb-2">December 05, 2026 • Makati Flagship</span>
+                            <h3 class="font-serif text-2xl font-bold text-espresso mb-3">Winter Skincare & Radiance Workshop</h3>
+                            <p class="text-sm text-espresso/70 font-light leading-relaxed mb-6">Learn personalized layering techniques and winter hydration protocols directly from our master aestheticians.</p>
+                            <div class="text-xs text-espresso/60 mb-6 space-y-1">
+                                <p><i class="fa-solid fa-clock text-[#C5A059] mr-2"></i> 4:00 PM - 6:30 PM</p>
+                                <p><i class="fa-solid fa-user-group text-[#C5A059] mr-2"></i> Limited to 30 Attendees</p>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Workshop: Winter Skincare')" class="w-full py-3 bg-espresso text-white text-xs uppercase tracking-widest hover:bg-[#997530] transition-all">RSVP Attendance</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Booking / Inquiry Modal -->
+    <div id="bookingModal" class="fixed inset-0 z-50 bg-black/50 hidden items-center justify-center p-4">
+        <div class="bg-white max-w-lg w-full p-8 border border-[#C5A059] relative editorial-shadow">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-espresso hover:text-[#997530] text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="bookingModalTitle" class="font-serif text-2xl font-bold text-espresso mb-2">Reserve Treatment</h3>
+            <p class="text-xs text-espresso/60 font-light mb-6">Please provide your preferred appointment details below.</p>
+            <form onsubmit="handleBookingSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Full Name</label>
+                    <input type="text" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none" placeholder="Victoria Sterling">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Preferred Date & Time</label>
+                    <input type="datetime-local" required class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider font-semibold text-espresso mb-2">Branch Location</label>
+                    <select class="w-full p-3 bg-white border border-[#C5A059] text-sm text-espresso focus:outline-none">
+                        <option>Bonifacio Global City (BGC Taguig)</option>
+                        <option>Makati Flagship (Ayala Triangle)</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-4 gold-gradient-bg text-white text-xs uppercase tracking-widest font-medium hover:opacity-95 transition-all shadow-md mt-4">
+                    Confirm Reservation
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="fixed inset-0 z-50 bg-black/50 hidden items-center justify-center p-4">
+        <div class="bg-white max-w-2xl w-full p-8 border border-[#C5A059] relative editorial-shadow max-h-[85vh] overflow-y-auto">
+            <button onclick="closeBlogModal()" class="absolute top-4 right-4 text-espresso hover:text-[#997530] text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <span class="text-xs uppercase tracking-widest text-[#997530] font-semibold mb-2 block">Glowery Editorial Journal</span>
+            <h2 id="blogModalTitle" class="font-serif text-2xl sm:text-3xl font-bold text-espresso mb-4">Article Title</h2>
+            <div class="w-16 h-0.5 bg-[#C5A059] mb-6"></div>
+            <div class="space-y-4 text-sm text-espresso/80 font-light leading-relaxed">
+                <p>Micronized gold and advanced botanical extracts have long been the gold standard in high-end dermatological care. At Glowery Skin Aesthetics, our clinical protocols harness these rare active elements to restore cellular vitality.</p>
+                <p>Through precise ion exchange stimulation, dermal micro-circulation is enhanced, resulting in a luminous, youthful barrier that resists environmental degradation and oxidative stress.</p>
+                <p>Our experts recommend pairing professional in-clinic gold infusion sessions with our tailored home-care regimen to sustain optimal dermal results throughout the changing seasons.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer Modal -->
+    <div id="cartModal" class="fixed inset-0 z-50 bg-black/50 hidden justify-end">
+        <div class="bg-white w-full max-w-md h-full p-6 sm:p-8 flex flex-col justify-between border-l border-[#C5A059] overflow-y-auto">
+            <div>
+                <div class="flex items-center justify-between pb-4 border-b border-[#E6D5B8] mb-6">
+                    <h3 class="font-serif text-xl font-bold text-espresso">Your Skincare Bag</h3>
+                    <button onclick="closeCartModal()" class="text-espresso hover:text-[#997530] text-xl">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div id="cartItemsList" class="space-y-4 mb-6">
+                    <!-- Cart items will be injected here -->
+                    <p class="text-xs text-espresso/60 italic text-center py-8">Your bag is currently empty.</p>
+                </div>
+            </div>
+            <div class="border-t border-[#E6D5B8] pt-6 space-y-4">
+                <div class="flex items-center justify-between font-serif text-lg font-bold text-espresso">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice">$0.00</span>
+                </div>
+                <button onclick="checkoutCart()" class="w-full py-4 gold-gradient-bg text-white text-xs uppercase tracking-widest font-medium hover:opacity-95 transition-all shadow-md">
+                    Proceed to Secure Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-espresso text-white py-16 px-4 sm:px-6 lg:px-8 border-t border-[#997530]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full border border-[#C5A059] flex items-center justify-center bg-white text-[#997530] font-serif font-bold text-sm">G</div>
+                    <span class="font-serif text-xl font-bold tracking-wider text-white">GLOWERY</span>
+                </div>
+                <p class="text-xs text-white/70 font-light leading-relaxed">
+                    Pristine luxury skin aesthetics, precision laser care, and rejuvenating spa sanctuaries established in 2021.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-serif text-sm font-bold uppercase tracking-widest text-[#C5A059] mb-4">Navigation</h4>
+                <ul class="space-y-2 text-xs text-white/80 font-light">
+                    <li><button onclick="switchTab('home')" class="hover:text-[#C5A059] transition-all">Home</button></li>
+                    <li><button onclick="switchTab('clinic')" class="hover:text-[#C5A059] transition-all">The Clinic</button></li>
+                    <li><button onclick="switchTab('treatments')" class="hover:text-[#C5A059] transition-all">Treatments</button></li>
+                    <li><button onclick="switchTab('promo')" class="hover:text-[#C5A059] transition-all">Promo</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-sm font-bold uppercase tracking-widest text-[#C5A059] mb-4">Sanctuaries</h4>
+                <ul class="space-y-2 text-xs text-white/80 font-light">
+                    <li>Bonifacio Global City, Taguig</li>
+                    <li>Ayala Triangle, Makati City</li>
+                    <li>concierge@glowery.com</li>
+                    <li>+63 (2) 8839-4920</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-sm font-bold uppercase tracking-widest text-[#C5A059] mb-4">Editorial Journal</h4>
+                <p class="text-xs text-white/70 font-light mb-4">Subscribe for private seasonal skincare guides and VIP invitations.</p>
+                <form onsubmit="handleNewsletter(event)" class="flex">
+                    <input type="email" required placeholder="Email address" class="p-2.5 bg-white/10 border border-[#C5A059] text-xs text-white placeholder-white/50 focus:outline-none flex-grow">
+                    <button type="submit" class="px-4 gold-gradient-bg text-white text-xs font-semibold uppercase">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 text-center text-[10px] text-white/50 uppercase tracking-widest">
+            © 2021 - 2026 Glowery Skin Aesthetics. All Rights Reserved. Pure Editorial Luxury.
+        </div>
+    </footer>
+
+    <script>
+        // Global State
+        let currentActiveTab = 'home';
+        let cart = [];
+        let isAudioPlaying = false;
+        let audioCtx = null;
+        let audioInterval = null;
+
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            
+            // Update nav active styles
+            document.querySelectorAll('.nav-link').forEach(el => {
+                el.classList.remove('border-[#C5A059]', 'text-espresso');
+                el.classList.add('border-transparent');
+            });
+            const activeNav = document.getElementById('nav-' + tabId);
+            if(activeNav) {
+                activeNav.classList.add('border-[#C5A059]', 'text-espresso');
+                activeNav.classList.remove('border-transparent');
+            }
+
+            currentActiveTab = tabId;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Handle background music rule: plays on Home tab only
+            const musicContainer = document.getElementById('musicControlContainer');
+            if (tabId === 'home') {
+                musicContainer.classList.remove('hidden');
+            } else {
+                musicContainer.classList.add('hidden');
+                if (isAudioPlaying) {
+                    toggleSpaAudio(); // pause when leaving home tab
+                }
+            }
+        }
+
+        // Web Audio API Soothing Spa Sound Generator (No external URLs)
+        function toggleSpaAudio() {
+            const icon = document.getElementById('musicIcon');
+            const slash = document.getElementById('musicSlash');
+
+            if (!isAudioPlaying) {
+                try {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    playAmbientSpaDrone();
+                    isAudioPlaying = true;
+                    slash.classList.remove('hidden');
+                    icon.style.opacity = '0.4';
+                    showToast('Soothing spa ambient audio playing', 'success');
+                } catch(e) {
+                    showToast('Audio playback not supported by browser', 'error');
+                }
+            } else {
+                if (audioCtx) {
+                    audioCtx.close();
+                    audioCtx = null;
+                }
+                if (audioInterval) clearInterval(audioInterval);
+                isAudioPlaying = false;
+                slash.classList.add('hidden');
+                icon.style.opacity = '1';
+                showToast('Spa audio muted', 'success');
+            }
+        }
+
+        function playAmbientSpaDrone() {
+            if (!audioCtx) return;
+            // Play gentle soothing chord arpeggio at intervals
+            const notes = [261.63, 329.63, 392.00, 523.25]; // C major chord
+            let index = 0;
+            
+            audioInterval = setInterval(() => {
+                if (!audioCtx || audioCtx.state === 'closed') return;
+                try {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(notes[index % notes.length], audioCtx.currentTime);
+                    index++;
+
+                    gain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.08, audioCtx.currentTime + 1);
+                    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 4);
+
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 4.5);
+                } catch(e) {}
+            }, 3000);
+        }
+
+        // Cart Management
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCartUI();
+            showToast(`Added "${name}" to your skincare bag`, 'success');
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cartBadge');
+            badge.innerText = cart.length;
+
+            const listContainer = document.getElementById('cartItemsList');
+            const totalContainer = document.getElementById('cartTotalPrice');
+
+            if (cart.length === 0) {
+                listContainer.innerHTML = `<p class="text-xs text-espresso/60 italic text-center py-8">Your bag is currently empty.</p>`;
+                totalContainer.innerText = '$0.00';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                html += `
+                    <div class="flex items-center justify-between p-3 border border-[#E6D5B8] bg-[#FAF8F5]">
+                        <div>
+                            <h5 class="text-xs font-bold text-espresso">${item.name}</h5>
+                            <span class="text-xs text-[#997530] font-semibold">$${item.price}.00</span>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-espresso hover:text-red-600 text-xs">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+            });
+            listContainer.innerHTML = html;
+            totalContainer.innerText = `$${total.toFixed(2)}`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+            showToast('Item removed from bag', 'success');
+        }
+
+        function openCartModal() {
+            document.getElementById('cartModal').classList.remove('hidden');
+            document.getElementById('cartModal').classList.add('flex');
+        }
+
+        function closeCartModal() {
+            document.getElementById('cartModal').classList.add('hidden');
+            document.getElementById('cartModal').classList.remove('flex');
+        }
+
+        function checkoutCart() {
+            if (cart.length === 0) {
+                showToast('Your bag is empty', 'error');
+                return;
+            }
+            showToast('Order successfully placed! Thank you for choosing Glowery.', 'success');
+            cart = [];
+            updateCartUI();
+            closeCartModal();
+        }
+
+        // Booking Modal
+        function openBookingModal(treatmentName) {
+            document.getElementById('bookingModalTitle').innerText = 'Reserve: ' + treatmentName;
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.getElementById('bookingModal').classList.add('flex');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+            document.getElementById('bookingModal').classList.remove('flex');
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            closeBookingModal();
+            showToast('Appointment reservation successfully confirmed! Confirmation sent to your email.', 'success');
+        }
+
+        function bookPromo() {
+            const option = document.getElementById('promoOption').value;
+            openBookingModal('Royal Gold Illumination (' + option + ')');
+        }
+
+        // Blog Modal
+        function openBlogModal(title) {
+            document.getElementById('blogModalTitle').innerText = title;
+            document.getElementById('blogModal').classList.remove('hidden');
+            document.getElementById('blogModal').classList.add('flex');
+        }
+
+        function closeBlogModal() {
+            document.getElementById('blogModal').classList.add('hidden');
+            document.getElementById('blogModal').classList.remove('flex');
+        }
+
+        // Auth Tabs in Members Portal
+        function switchAuthTab(type) {
+            const btnSignin = document.getElementById('authTabSignin');
+            const btnSignup = document.getElementById('authTabSignup');
+            const formSignin = document.getElementById('formSignin');
+            const formSignup = document.getElementById('formSignup');
+
+            if (type === 'signin') {
+                btnSignin.className = "flex-1 pb-4 text-xs uppercase tracking-widest font-bold text-[#997530] border-b-2 border-[#C5A059] transition-all";
+                btnSignup.className = "flex-1 pb-4 text-xs uppercase tracking-widest font-medium text-espresso/60 border-b-2 border-transparent transition-all";
+                formSignin.classList.remove('hidden');
+                formSignup.classList.add('hidden');
+            } else {
+                btnSignup.className = "flex-1 pb-4 text-xs uppercase tracking-widest font-bold text-[#997530] border-b-2 border-[#C5A059] transition-all";
+                btnSignin.className = "flex-1 pb-4 text-xs uppercase tracking-widest font-medium text-espresso/60 border-b-2 border-transparent transition-all";
+                formSignup.classList.remove('hidden');
+                formSignin.classList.add('hidden');
+            }
+        }
+
+        function handleAuthSubmit(e, type) {
+            e.preventDefault();
+            showToast(`${type} successful! Welcome to Glowery Elite Portal.`, 'success');
+        }
+
+        // Contact & Newsletter Forms
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast('Inquiry submitted successfully! Our concierge will contact you shortly.', 'success');
+        }
+
+        function handleNewsletter(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast('Subscribed successfully to the Glowery Editorial Journal.', 'success');
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Toast Notification System
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `p-4 bg-white border ${type === 'success' ? 'border-[#C5A059]' : 'border-red-500'} editorial-shadow text-xs font-semibold text-espresso flex items-center gap-3 transition-all duration-300 transform translate-y-2 opacity-0`;
+            toast.innerHTML = `
+                <i class="fa-solid ${type === 'success' ? 'fa-circle-check text-[#997530]' : 'fa-circle-exclamation text-red-500'} text-base"></i>
+                <span>${message}</span>
+            `;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+
+        // Live Member Counter Animation simulation
+        window.addEventListener('DOMContentLoaded', () => {
+            let count = 2485;
+            setInterval(() => {
+                if (Math.random() > 0.7) {
+                    count += Math.floor(Math.random() * 3) - 1;
+                    const counterEl = document.getElementById('memberCounter');
+                    if(counterEl) counterEl.innerText = count.toLocaleString();
+                }
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
